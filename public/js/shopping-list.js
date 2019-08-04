@@ -25,8 +25,8 @@ class ShoppingList {
 
   render() {
     return (
-      this.items.reduce(function(accumulator, currentValue) {
-        return accumulator + currentValue.render();
+      this.items.reduce(function(accumulator, currentValue,i) {
+        return accumulator + currentValue.render(i);
       }, "<ul>") + "</ul>"
     );
   }
